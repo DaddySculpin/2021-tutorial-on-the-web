@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="TutorialApp" ng-controller="TutorialCtrl" ng-class="currentTheme" style="background-color:#333">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <title>Welcome to the NAEP assessment</title>
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script>
+        angular.module('appStateInfoModule', []);
+    </script>
+    <script src="Scripts/constantService.js"></script>
+    <script>
+        var app = angular.module('TutorialApp', ['scratchworkModule', 'appStateInfoModule']);
+    </script>
+    <script src="Scripts/paper-full-0.11.3.js"></script>
+    <script src="Scripts/loggerServiceModule.js"></script>
+    <script src="Scripts/loggerService.js"></script>
+    <script src="Scripts/tutorialHelperService.js"></script>
+    <script src="Scripts/Scratchwork/scratchworkModule.js"></script>
+    <script src="Scripts/Scratchwork/scratchworkDirective.js"></script>
+    <script src="Scripts/Scratchwork/scratchworkTutorialService.js"></script>
+    <script src="Scripts/toolbarDirective.js"></script>
+    <script src="Scripts/audioSprites.js"></script>
+    <script src="mini-enaep.js"></script>
+    <style type="text/css">
+        html.high {
+            color: white;
+        }
+
+        #tutFrame {
+            width: 1152px;
+            height: 720px;
+        }
+
+        #tutFrame.fullscreen {
+            height: 768px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="Scripts/toolbar.css" />
+</head>
+
+<body id="toolbar-body" onload='self.focus();' class="ng-scope" cz-shortcut-listen="true"
+    style="margin: 0; overflow: hidden;">
+    <div id="main-container" style="position: absolute; top: 0; left: 0;">
+        <!-- <iframe name="toolbar" id="toolbar" frameborder="0" scrolling="no" style="width: 1152; height: 48;" src=""></iframe> -->
+        <enaep-toolbar ng-if="showToolbar" toolbar-style="toolbarBackgroundStyle" class="tutorial-toolbar" settings="tutorialToolbarSettings"></enaep-toolbar>
+        <iframe name="tutFrame" id="tutFrame" frameborder="0" scrolling="no" allowfullscreen="true" ng-class="{fullscreen: !showToolbar}"
+            src=""></iframe>
+    </div>
+    <!--#region Scratchwork Canvas- START -->
+
+    <div id="scratchPadTutorial" class="{{tutorial.scratchworkManager.contentInfo.scratchPadInfo.contentStyle}}" style="position: absolute; left: 0; width: 0; height: 0;">
+        <canvas id="scratchPadTutorialItemCanvas" enp-scratchwork class="{{tutorial.scratchworkManager.contentInfo.itemCanvasInfo.contentStyle}}"
+            width="0" height="0" style="cursor: url('./content/cursors/cur_draw_scratch.cur')20 20, auto;"></canvas>
+    </div>
+
+    <!--#endregion Scratchwork Canvas - END -->
+</body>
+
+</html>

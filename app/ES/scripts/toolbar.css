@@ -1,0 +1,800 @@
+html enaep-toolbar {
+    display: block;
+    font-size: 1px;
+}
+
+/* html enaep-toolbar .toolbar-placeholder {
+    height: 60em
+}
+
+html enaep-toolbar .student-toolbar-v2 {
+    zoom: 0.785
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    html enaep-toolbar .student-toolbar-v2 {
+        width: 1467em;
+    }
+}
+
+@media screen and (-moz-images-in-menus:0) {
+    html enaep-toolbar .student-toolbar-v2 {
+        transform: scale(0.785);
+        transform-origin: left top;
+        width: 1467em;
+    }
+}
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+    html enaep-toolbar {
+        height: 61em;
+    }
+} */
+
+html enaep-toolbar .student-toolbar-v2 {
+    font-size: inherit;
+}
+
+html enaep-toolbar .student-toolbar-v2 .toolbar-button-group-flex span span, .blockTitle, #timer-tray p {
+    font-size: 18em;
+}
+
+html .student-toolbar-v2 {
+    z-index: 99999;
+    background: #eee;
+    border-bottom: 1em solid #bfbfbf;
+    display: flex;
+    font-family: Calibri, sans-serif;
+    font-size: 20em;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+html .student-toolbar-v2.ng-hide-add, html .student-toolbar-v2 .ng-hide-remove, html .student-toolbar-v2 .animating {
+    display: block !important
+}
+
+html .student-toolbar-v2.help-mockup {
+    background: none;
+    border: 0;
+    display: inline-block;
+    zoom: 1.5;
+    pointer-events: none
+}
+
+html .student-toolbar-v2.help-mockup button {
+    pointer-events: none
+}
+
+html .student-toolbar-v2.help-mockup p {
+    padding: 0 10em
+}
+
+html .student-toolbar-v2 #student-toolbar-spacer {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 60em;
+    max-height: 60em;
+    content: ''
+}
+
+html .student-toolbar-v2 .toolbar-button-group {
+    display: flex;
+    border-right: 1em solid #bfbfbf;
+    padding: 0 7em 0 0
+}
+
+html .student-toolbar-v2 .toolbar-button-group p {
+    margin: 0
+}
+
+html .student-toolbar-v2 .toolbar-button-group:last-child {
+    border-right: none
+}
+
+html .student-toolbar-v2 .toolbar-button-group-flex {
+    position: relative;
+    flex: 1 0 auto
+}
+
+html .student-toolbar-v2 .toolbar-button-group-flex::before {
+    content: '';
+    width: 100%;
+    height: 61em;
+    max-height: 61em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("data:image/png;base64,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");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+html .student-toolbar-v2 .toolbar-button-group-column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+html .student-toolbar-v2 .toolbar-button-group-column span {
+    z-index: 1
+}
+
+html .student-toolbar-v2 .btn-tray {
+    border-radius: 0 3em 3em 0;
+    border: 1em solid #b2b2b2;
+    border-left: none;
+    display: flex;
+    margin: 5em 0;
+    transition: width .3s, border-width .3s, padding .3s
+}
+
+html .student-toolbar-v2 .btn-tray.hidden {
+    width: 0;
+    max-width: 0;
+    border-width: 0;
+    overflow: hidden;
+    margin: 4em 0
+}
+
+html .student-toolbar-v2 .btn-tray#scratchwork-tray {
+    background: #fff;
+    border-color: #2a8dd4;
+    width: 195em;
+    max-width: 195em;
+    display: flex !important
+}
+
+html .student-toolbar-v2 .btn-tray#scratchwork-tray.hidden, html .student-toolbar-v2 .btn-tray#scratchwork-tray.ng-hide {
+    width: 0;
+    max-width: 0;
+    border-width: 0;
+    overflow: hidden;
+    margin: 4em 0;
+    display: flex !important
+}
+
+html .student-toolbar-v2 .btn-tray#timer-tray {
+    overflow: hidden;
+    display: flex !important
+}
+
+html .student-toolbar-v2 .btn-tray#timer-tray.en {
+    width: 115em;
+    max-width: 115em
+}
+
+html .student-toolbar-v2 .btn-tray#timer-tray.es {
+    width: 161em;
+    max-width: 161em;
+}
+
+html .student-toolbar-v2 .btn-tray#timer-tray.hidden, html .student-toolbar-v2 .btn-tray#timer-tray.ng-hide {
+    width: 0;
+    max-width: 0;
+    border-width: 0;
+    overflow: hidden;
+    margin: 4em 0;
+    display: flex !important;
+    padding: 0
+}
+
+html .student-toolbar-v2 .btn-tray p {
+    margin: 0
+}
+
+html .student-toolbar-v2 #student-toolbar p {
+    margin: 0 0 0 8em
+}
+
+html .student-toolbar-v2 #student-toolbar .btn-tray p {
+    margin: 0
+}
+
+html .student-toolbar-v2 .toolbar-button, html .student-toolbar-v2 .toolbar-tray-button, html .student-toolbar-v2 .help-timer-tray-master {
+    display: block;
+    position: relative;
+    flex: 1 0 auto;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    border-radius: 3em;
+    border: 1em solid transparent;
+    margin: 5em 0 5em 6.5em;
+    transition: background .2s, border-color .2s, margin .2s, box-shadow .2s;
+    cursor: pointer
+}
+
+html .student-toolbar-v2 button#timer-btn.active:not([disabled]):active, html .student-toolbar-v2 button#timer-btn:not([disabled]):active, html .student-toolbar-v2 .toolbar-button-group button.toolbar-button:not([disabled]):active {
+    box-shadow: 0 0 10em rgba(0, 0, 0, 0.25) inset
+}
+
+html .student-toolbar-v2 .toolbar-tray-button {
+    border-radius: 5em;
+    margin: 4em 0 4em 4em;
+    opacity: 1;
+    transition: background .2s, border-color .2s, opacity .2s .3s, box-shadow .2s
+}
+
+html .student-toolbar-v2 #scratchwork-tray.hidden .toolbar-tray-button {
+    opacity: 0
+}
+
+html .student-toolbar-v2 .toolbar-button:not([disabled]):hover, html .student-toolbar-v2 #timer-btn:not([disabled]).active:hover {
+    background-color: #fff;
+    border-color: #b2b2b2;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.15)
+}
+
+html .student-toolbar-v2 .toolbar-tray-button:not([disabled]):hover {
+    background-color: #C4E0F8
+}
+
+html .student-toolbar-v2 #scratchwork-btn.active:not([disabled]):hover, html .student-toolbar-v2 .toolbar-button.active:not([disabled]):hover {
+    background: #d6ebff;
+    border-color: #2a8dd4
+}
+
+html .student-toolbar-v2 .v:active, html .student-toolbar-v2 .toolbar-tray-button:active, html .student-toolbar-v2 #timer-btn.active:active {
+    background-color: #fff;
+    border-color: #b2b2b2;
+    box-shadow: 0 0 10em rgba(0, 0, 0, 0.25) inset
+}
+
+html .student-toolbar-v2 #scratchwork-btn.active:active, html .student-toolbar-v2 .toolbar-tray-button:active, html .student-toolbar-v2 .toolbar-button.active:active {
+    background-color: #C4E0F8;
+    border-color: #2a8dd4
+}
+
+html .student-toolbar-v2 .toolbar-tray-button.active {
+    opacity: 1
+}
+
+html .student-toolbar-v2 .toolbar-button.disabled, html .student-toolbar-v2 .toolbar-tray-button.disabled {
+    cursor: default;
+    color: #999
+}
+
+html .student-toolbar-v2 .toolbar-button.active, html .student-toolbar-v2 #scratchwork-btn.active, html .student-toolbar-v2 .toolbar-tray-button.active {
+    background: #C4E0F8;
+    border-color: #2a8dd4;
+    pointer-events: auto;
+    cursor: pointer
+}
+
+html .student-toolbar-v2:not(.tutorial-toolbar) .btn-tray-master.active, html .student-toolbar-v2 .help-timer-tray-master {
+    border-radius: 3em 0 0 3em;
+    border-color: #b2b2b2;
+    background: none;
+    transition: background .2s, border-color .2s
+}
+
+html .student-toolbar-v2 .system-btn-icon {
+    height: 50em;
+    max-height: 50em;
+    width: 50em;
+    max-width: 50em;
+}
+
+html .student-toolbar-v2 .system-icon-main-color, html .student-toolbar-v2 .toolbar-button.disabled.active .system-icon-main-color {
+    fill: #3f3f3f;
+    transition: fill .2s
+}
+
+html .student-toolbar-v2 .toolbar-button.disabled .system-icon-main-color, html .student-toolbar-v2 .toolbar-button.disabled #backIcon {
+    fill: #b3b3b3
+}
+
+html .student-toolbar-v2 .system-icon-accent-color, html .student-toolbar-v2 #backIcon, html .student-toolbar-v2 #arrow {
+    transition: fill-opacity .2s, fill .2s
+}
+
+html .student-toolbar-v2 .toolbar-button.disabled .system-icon-accent-color {
+    fill-opacity: 0.5
+}
+
+html .student-toolbar-v2 .toolbar-button.active .system-icon-accent-color {
+    fill-opacity: 1
+}
+
+html .student-toolbar-v2 .tray-icons {
+    width: 38em;
+    max-width: 38em;
+    height: 38em;
+    max-height: 38em;
+}
+
+html .student-toolbar-v2 #change-lang-btn-esp-box {
+    transform: translateX(-30px);
+    animation: slide-right .3s ease forwards
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-30px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+html .student-toolbar-v2 #change-lang-btn2-eng-box {
+    transform: translateX(-30px);
+    animation: slide-left .3s ease
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0px)
+    }
+    100% {
+        transform: translateX(-30px)
+    }
+}
+
+html .student-toolbar-v2 .arrow {
+    opacity: 0;
+    animation: fade-in .3s ease forwards
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    40% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+html .student-toolbar-v2 #change-lang-btn2-arrow {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg) translateY(24px);
+    transition: transform .4s
+}
+
+html .student-toolbar-v2 .toolbar-button.hidden {
+    display: none
+}
+
+html .student-toolbar-v2 #back-btn:not([disabled]):hover #backIcon {
+    fill: #008efa
+}
+
+html .student-toolbar-v2 #back-btn-wrapper {
+    border-radius: 3em;
+    border-color: transparent;
+    border-width: .5em;
+    border-style: solid;
+    margin: 1em 0 1em 5em
+}
+
+html .student-toolbar-v2 #back-btn-wrapper #back-btn {
+    margin: 2em;
+    border-radius: 50%;
+    border-width: 2em;
+    height: 42em;
+    max-height: 42em;
+    width: 42em;
+    max-width: 42em;
+    background: #f7f7f7;
+    border-color: #d0d0d0;
+}
+
+html .student-toolbar-v2 #back-btn svg {
+    fill: #2478cc;
+}
+
+html .student-toolbar-v2 #back-btn-wrapper.active {
+    background: #C4E0F8;
+    border-color: #2a8dd4
+}
+
+html .student-toolbar-v2 #next-btn-wrapper {
+    border-radius: 3em;
+    border-color: transparent;
+    border-width: 1em;
+    border-style: solid;
+    margin: 1em 0 1em 5em
+}
+
+html .student-toolbar-v2 #next-btn-wrapper #next-btn {
+    margin: 2em;
+    padding: 1em 4em 1em 8em;
+    font-size: inherit;
+}
+
+html .student-toolbar-v2 #next-btn {
+    display: flex;
+    align-items: center;
+}
+
+html .student-toolbar-v2 #next-btn span {
+    font-size: 24em;
+    font-weight: 700;
+    padding: 0;
+    color: #fff;
+}
+
+html .student-toolbar-v2 #next-btn svg {
+    fill: #fff;
+    margin-left: 1em;
+    -webkit-transition: fill .2s;
+    transition: fill .2s;
+    width: 32em;
+    max-width: 32em;
+}
+
+html .student-toolbar-v2 #next-btn-wrapper.active {
+    background: #2478cc;
+    border-color: #2a8dd4
+}
+
+html .student-toolbar-v2 #back-btn {
+    border-radius: 50%;
+    border-width: 2em;
+    width: 42em;
+    max-width: 42em;
+    height: 42em;
+    max-height: 42em;
+    padding: 0
+}
+
+html .student-toolbar-v2 #backIcon {
+    fill: #246bb2;
+    transform: rotate(180deg);
+    width: 32em;
+    max-width: 32em;
+}
+
+html .student-toolbar-v2 #next-btn, html .student-toolbar-v2 .help-next-btn {
+    position: relative;
+    background: #246bb2;
+    border-radius: 23em;
+    padding: 0;
+    border: 2em solid transparent;
+    height: 47em;
+    max-height: 47em;
+    box-shadow: 0 2em 3em rgba(0, 0, 0, 0.25);
+    transition: background .2s, box-shadow .2s;
+    cursor: pointer
+}
+
+html .student-toolbar-v2 #next-btn:not([disabled]):hover {
+    background-color: #008efa;
+    -webkit-tap-highlight-color: transparent
+}
+
+html .student-toolbar-v2 #next-btn:active {
+    box-shadow: none
+}
+
+html .student-toolbar-v2 #next-btn.disabled {
+    background: #ddd;
+    box-shadow: none;
+    pointer-events: none
+}
+
+html .student-toolbar-v2 #next-btn.disabled #arrow {
+    fill: #999
+}
+
+html .student-toolbar-v2 #next-btn.disabled span {
+    color: #999
+}
+
+html .student-toolbar-v2 .nav-btn-icon {
+    height: 42em;
+    max-height: 42em;
+    width: 42em;
+    max-width: 42em;
+    margin: -1em 0 0 -1em
+}
+
+html .student-toolbar-v2 p.time-left {
+    font-weight: bold;
+    padding: 0 15em
+}
+
+html .student-toolbar-v2 .progress-indicator {
+    border: 2em solid #aaa;
+    border-radius: 3em;
+    width: 70em;
+    max-width: 70em;
+    height: 16em;
+    max-height: 16em;
+    background: #fcfcfc;
+    margin: 10em 19em 5em 19em;
+    overflow: hidden
+}
+
+html .student-toolbar-v2 .progress-indicator-bar {
+    background: #0ba951;
+    border: 2em solid;
+    border-color: #fff;
+    width: 40%;
+    height: 12em;
+    max-height: 12em;
+}
+
+html .student-toolbar-v2 button .tooltip {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 50%;
+    margin-top: 7em;
+    padding: 6em 9em;
+    background: #444;
+    color: #fff;
+    border-radius: 3em;
+    border: 1em solid transparent;
+    font-family: Calibri, sans-serif;
+    font-size: 13em;
+    font-weight: bold;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s .3s;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+    width: 200%
+}
+
+html .student-toolbar-v2 button .tooltip::before {
+    display: block;
+    content: '';
+    width: 7em;
+    max-width: 7em;
+    height: 7em;
+    max-height: 7em;
+    background: #444;
+    border: 1em solid transparent;
+    transform: rotate(45deg);
+    top: -5em;
+    left: 50%;
+    margin-left: -4em;
+    position: absolute;
+    z-index: 2
+}
+
+html .student-toolbar-v2 button:not([disabled]):hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s .5s
+}
+
+html .student-toolbar-v2 input[type=text]:focus, html .student-toolbar-v2 textarea.extendedtext:focus, html .student-toolbar-v2 textarea.fib:focus {
+    background-color: rgba(0, 174, 239, 0.06);
+    box-shadow: 0 0em 5em 2em rgba(0, 0, 0, 0.16)
+}
+
+html .student-toolbar-v2 input[type=button]:focus, html .student-toolbar-v2 button:focus {
+    outline-offset: 6em;
+    outline-style: none;
+}
+
+html .student-toolbar-v2 input[type=text]:focus, html .student-toolbar-v2 textarea.extendedtext:focus {
+    outline-offset: 4em
+}
+
+html .student-toolbar-v2 #next-btn:focus, html .student-toolbar-v2 #back-btn:focus {
+    outline-offset: 3em
+}
+
+html .student-toolbar-v2 .mc-eliminate-choice:focus, html .student-toolbar-v2 .mc-choice-control:focus {
+    outline-offset: 2em
+}
+
+html .student-toolbar-v2 .toolbar-tray-button:focus {
+    outline-offset: 1em
+}
+
+html .student-toolbar-v2 .toolbar-button:focus, html .student-toolbar-v2 .formatted_reference:focus {
+    outline-offset: 0em
+}
+
+html .student-toolbar-v2 .inline-choice select:focus {
+    outline-offset: -2em
+}
+
+html .student-toolbar-v2 .mockup-video-scrub-segment:focus, html .student-toolbar-v2 textarea.fib:focus {
+    outline-offset: -3em
+}
+
+html.brushed .student-toolbar-v2.help-mockup button {
+    pointer-events: none
+}
+
+html.brushed .student-toolbar-v2.help-mockup p {
+    padding: 0 10em
+}
+
+html.low .student-toolbar-v2 {
+    background: #e0e0c7
+}
+
+html.low .student-toolbar-v2.help-mockup {
+    background: none;
+    pointer-events: none
+}
+
+html.low .student-toolbar-v2.help-mockup #timer-tray {
+    background-color: #e0e0c7
+}
+
+html.low .student-toolbar-v2.help-mockup button {
+    pointer-events: none
+}
+
+html.low .student-toolbar-v2.help-mockup p {
+    padding: 0 10em
+}
+
+html.low .student-toolbar-v2 .toolbar-button-group {
+    border-color: #bfbfaa
+}
+
+html.low .student-toolbar-v2 .progress-indicator {
+    background: #EAEAD2
+}
+
+html.low .student-toolbar-v2 #scratchwork-tray, html.low .student-toolbar-v2 #timer-btn.active, html.low .student-toolbar-v2 #timer-btn.active:not([disabled]):hover, html.low .student-toolbar-v2 .toolbar-button:not([disabled]):hover, html.low .student-toolbar-v2 .toolbar-button:active {
+    background: #e0e0c7;
+    border-color: #2a8dd4;
+}
+
+html.low .student-toolbar-v2 #scratchwork-tray {
+    background: #fff;
+}
+
+html.low .student-toolbar-v2 .toolbar-button-group-flex::before {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    opacity: .5
+}
+
+html.low .student-toolbar-v2 .progress-indicator-bar {
+    border-color: #EAEAD2
+}
+
+html.low .student-toolbar-v2 #next-btn.disabled {
+    background: #ccccb7
+}
+
+html.low .student-toolbar-v2 input[type=button]:focus, html.low .student-toolbar-v2 button:focus, html.low .student-toolbar-v2 .mc-eliminate-choice:focus, html.low .student-toolbar-v2 .mc-choice-control:focus, html.low .student-toolbar-v2 input[type=text]:focus, html.low .student-toolbar-v2 textarea:focus, html.low .student-toolbar-v2 .inline-choice select:focus, html.low .student-toolbar-v2 .systembtn:focus, html.low .student-toolbar-v2 .toolbar-tray-button:focus, html.low .student-toolbar-v2 #next-btn:focus, html.low .student-toolbar-v2 #back-btn:focus, html.low .student-toolbar-v2 .footnote-btn:focus, html.low .student-toolbar-v2 .footnote-lnk:focus, html.low .student-toolbar-v2 .footnote-close:focus, html.low .student-toolbar-v2 select, html.low .student-toolbar-v2 #QuestionsButton {
+    outline-color: #7A4200 !important
+}
+
+html.high .student-toolbar-v2 {
+    background: #000;
+    border-color: #fff
+}
+
+html.high .student-toolbar-v2.help-mockup button {
+    pointer-events: none
+}
+
+html.high .student-toolbar-v2.help-mockup p {
+    padding: 0 10em
+}
+
+html.high .student-toolbar-v2 img[src$=".svg"]:not(.No_Theme), html.high .student-toolbar-v2 img[src^="data:image/svg"]:not(.No_Theme), html.high .student-toolbar-v2 img[src$=".png"]:not(.No_Theme), html.high .student-toolbar-v2 img[src^="data:image/png"]:not(.No_Theme) {
+    -webkit-filter: grayscale(100%) invert(1) !important;
+    filter: grayscale(100%) invert(1) !important
+}
+
+html.high .student-toolbar-v2 .toolbar-button.btn-tray-master.active, html.high .student-toolbar-v2 #timer-btn.active, html.high .student-toolbar-v2 #scratchwork-tray, html.high .student-toolbar-v2 #scratchwork-btn.active, html.high #timer-tray.active {
+    background: #191919;
+    border-color: #fff;
+    box-shadow: none
+}
+
+html.high .student-toolbar-v2 .toolbar-button-group {
+    border-color: #fff
+}
+
+html.high .student-toolbar-v2 .toolbar-button-group-bright, html.high .student-toolbar-v2 .btn-tray-master.active:hover {
+    background: #262626
+}
+
+html.high .student-toolbar-v2 .toolbar-button-group-flex::before {
+    opacity: .2
+}
+
+html.high .student-toolbar-v2 .toolbar-button:not([disabled]):hover, html.high .student-toolbar-v2 .toolbar-tray-button:not([disabled]):hover, html.high .student-toolbar-v2 .toolbar-button:active, html.high .student-toolbar-v2 .toolbar-tray-button:active, html.high .student-toolbar-v2 .toolbar-button.active {
+    background: #262626
+}
+
+html.high .student-toolbar-v2 .toolbar-button, html.high .student-toolbar-v2 .toolbar-tray-button, html.high .student-toolbar-v2 .toolbar-button.active {
+    color: #fff
+}
+
+html.high .student-toolbar-v2 .toolbar-button.active {
+    border-color: #D1D1D1
+}
+
+html.high .student-toolbar-v2 .toolbar-button.active:not([disabled]):hover, html.high .student-toolbar-v2 #scratchwork-btn.active:not([disabled]):hover, html.high .student-toolbar-v2 #timer-btn.active:not([disabled]):hover {
+    border-color: #fff;
+    background: #424242
+}
+
+html.high .student-toolbar-v2 #timer-btn.active:active, html.high .student-toolbar-v2 .toolbar-button:active, html.high .student-toolbar-v2 .toolbar-tray-button:active, html.high .student-toolbar-v2 .toolbar-button.active:active {
+    background: #4d4d4d
+}
+
+html.high .student-toolbar-v2 .toolbar-tray-button.active {
+    border-color: #add6ff;
+    background: #000
+}
+
+html.high .student-toolbar-v2 .system-icon-main-color, html.high .student-toolbar-v2 .toolbar-button.active .system-icon-main-color, html.high .student-toolbar-v2 .toolbar-button.disabled.active .system-icon-main-color, html.high .student-toolbar-v2 .tray-icons, html.high .student-toolbar-v2 #backIcon {
+    fill: #e5e5e5
+}
+
+html.high .student-toolbar-v2 .purplecircle {
+    fill: #C88AFF
+}
+
+html.high .student-toolbar-v2 #TTSBlueBubble {
+    fill: #80d3f9
+}
+
+html.high .student-toolbar-v2 #EEgreenbox {
+    fill: #81f7c2
+}
+
+html.high .student-toolbar-v2 #scratchworkScribble {
+    fill: #d67878 !important
+}
+
+html.high .student-toolbar-v2 #woodColor, html.high .student-toolbar-v2 #highlighterPenColor, html.high .student-toolbar-v2 #highlighterTipColor, html.high .student-toolbar-v2 #eraserTipColor {
+    fill: #000 !important
+}
+
+html.high .student-toolbar-v2 #next-btn, html.high .student-toolbar-v2 .help-next-btn {
+    background: #143d66;
+    border-color: #3399ff;
+    box-shadow: none
+}
+
+html.high .student-toolbar-v2 #next-btn:not([disabled]):hover {
+    background-color: #1f5c99;
+    box-shadow: none
+}
+
+html.high .student-toolbar-v2 #next-btn.disabled {
+    background: #000;
+    border-color: #444
+}
+
+html.high .student-toolbar-v2 .progress-indicator {
+    border-color: #fff;
+    background: #000
+}
+
+html.high .student-toolbar-v2 .progress-indicator-bar {
+    border-color: #000
+}
+
+html.high .student-toolbar-v2 button .tooltip {
+    border-color: #fff
+}
+
+html.high .student-toolbar-v2 button .tooltip::before {
+    border-color: #fff transparent transparent #fff
+}
+
+html.high .student-toolbar-v2 input[type=button]:focus, html.high .student-toolbar-v2 button:focus, html.high .student-toolbar-v2 .mc-eliminate-choice:focus, html.high .student-toolbar-v2 .mc-choice-control:focus, html.high .student-toolbar-v2 input[type=text]:focus, html.high .student-toolbar-v2 textarea:focus, html.high .student-toolbar-v2 .inline-choice select:focus, html.high .student-toolbar-v2 .systembtn:focus, html.high .student-toolbar-v2 .toolbar-tray-button:focus, html.high .student-toolbar-v2 #next-btn:focus, html.high .student-toolbar-v2 #back-btn:focus, html.high .student-toolbar-v2 .footnote-btn:focus, html.high .student-toolbar-v2 .footnote-lnk:focus, html.high .student-toolbar-v2 .footnote-close:focus, html.high .student-toolbar-v2 select, html.high .student-toolbar-v2 #QuestionsButton {
+    outline-color: #fff !important
+}
