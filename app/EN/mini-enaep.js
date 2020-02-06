@@ -679,7 +679,7 @@
 							return;
 						}
 					// 	$scope.progress.value = (tutorialModuleIndex + 1) / tutorialModules.length * 100;
-					// 	$('#tutFrame').attr('src', 'Tutorials/' + tutorialModules[tutorialModuleIndex++] + '/index.html');
+					// 	$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex++] + '/index.html');
 					// 	$timeout(function () {
 					// 		$scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
 					// 		$scope.currentItem.accessionNumber = currentTutorialModule;
@@ -702,7 +702,7 @@
 						$scope.progress.value = (tutorialModuleIndex + 1) / (tutorialModules.length - 1) * 100;
 						if($scope.progress.value >= 95)
 							$scope.progress.value = 95;
-						$('#tutFrame').attr('src', 'Tutorials/' + tutorialModules[tutorialModuleIndex] + '/index.html');
+						$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex] + '/index.html');
 						$timeout(function () {
 							$scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
 							$scope.currentItem.accessionNumber = currentTutorialModule;
@@ -719,7 +719,7 @@
 					if (tutorialModuleIndex > 0) {
 						currentTutorialModule = tutorialModules[tutorialModuleIndex - 2];
 						$scope.progress.value = (tutorialModuleIndex - 1) / tutorialModules.length * 100;
-						$('#tutFrame').attr('src', 'Tutorials/' + tutorialModules[tutorialModuleIndex - 2] + '/index.html');
+						$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex - 2] + '/index.html');
 						tutorialModuleIndex--;
 						$timeout(function () {
 							$scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
