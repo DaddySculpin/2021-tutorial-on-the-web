@@ -698,7 +698,7 @@
 						if(tutorialModuleIndex + 1 < tutorialModules.length) {
 							window.location.href = 'main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
 							// backup 
-							// window.location.href = 'https://totw-stage.naepims.org/app/en/main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
+							// window.location.href = 'https://totw-stage.naepims.org/app/EN/main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
 							return;
 						}
 					// 	$scope.progress.value = (tutorialModuleIndex + 1) / tutorialModules.length * 100;
