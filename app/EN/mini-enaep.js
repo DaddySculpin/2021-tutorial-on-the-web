@@ -207,6 +207,25 @@
 			calculator: { isVisible: true },
 			timer: { isVisible: true },
 			progress: { isVisible: true }
+		},
+
+		'SocialSciences8': {
+			help: { isVisible: true },
+			theme: { isVisible: true },
+			zoom: { isVisible: true },
+			tts: { isVisible: true },
+			scratchwork: {
+				isVisible: true,
+				pencil: { style: '' },
+				highlighter: { style: '' },
+				eraser: { style: '' },
+				clear: { style: '' }
+			},
+			bilingualToggle: { isVisible: false },
+			equationEditor: { isVisible: false },
+			calculator: { isVisible: false },
+			timer: { isVisible: true },
+			progress: { isVisible: true }
 		}
 
 
@@ -223,15 +242,19 @@
 
 		
 		'SocialSciences8': [
+			'Intro-SS',],
+		
+		
+		/*
+		'SocialSciences8': [
 			'Intro-SS',
 			'Placeholder',
 			'UI-SS',
 			'Practice-SS',
 			'Outro',
-			'Static-Menu-Common-EN',],
+			'Static-Menu-Common-EN',],		
 		
-		
-		/*'Math4': [
+		'Math4': [
 			'Intro-M4',
 			'UI-M4',
 			'EE4',
