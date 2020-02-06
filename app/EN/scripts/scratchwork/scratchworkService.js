@@ -960,13 +960,13 @@
                     function getCursorValue(mode) {
                         switch (mode) {
                             case namesOfToolModes.Draw:
-                                return "url('../../Content/images/student/Cur_Draw_Scratch.cur'), auto";
+                                return "url('../../content/images/student/Cur_Draw_Scratch.cur'), auto";
                                 break;
                             case namesOfToolModes.Erase:
-                                return "url('../../Content/images/student/Cur_Erase_Scratch.cur'), auto";
+                                return "url('../../content/images/student/Cur_Erase_Scratch.cur'), auto";
                                 break;
                             case namesOfToolModes.Highlight:
-                                return "url('../../Content/images/student/Cur_Highlighter_Scratch.cur'), auto";
+                                return "url('../../content/images/student/Cur_Highlighter_Scratch.cur'), auto";
                                 break;
                         }
                     };

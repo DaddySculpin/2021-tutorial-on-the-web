@@ -32,7 +32,7 @@
 
 	var Resources = {};
 
-	$.getJSON('./Content/i18nResources/StringResource_en.json', function(json) {
+	$.getJSON('./content/i18nResources/StringResource_en.json', function(json) {
 		Resources = json;
 	});
 

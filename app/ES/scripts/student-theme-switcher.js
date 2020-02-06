@@ -25,7 +25,7 @@ function SetStylesheetForTheme(desiredTheme) {
 	}).first();
 
 	if ($stylesheet.length) 
-		$stylesheet.attr("href", "/Content/styles/themes/" + desiredTheme + ".css");
+		$stylesheet.attr("href", "/content/styles/themes/" + desiredTheme + ".css");
 
 	// Set the new theme
 	$("#themeNumber").val(desiredTheme);

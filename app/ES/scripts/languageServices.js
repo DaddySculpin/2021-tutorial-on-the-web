@@ -18,12 +18,12 @@
                });
 
                var _resourceInfo = {};
-                _resourceInfo[_supportedLanguagesConstants.EN] = { path: 'Content/i18nResources/StringResource_en.json', data: null };
-                _resourceInfo[_supportedLanguagesConstants.ES_PR] = { path: 'Content/i18nResources/StringResource_es.json', data: null };
-                _resourceInfo[_supportedLanguagesConstants.EN_US] = { path: 'Content/i18nResources/StringResource_en.json', data: null };
-                _resourceInfo[_supportedLanguagesConstants.ES_US] = { path: 'Content/i18nResources/StringResource_es.json', data: null };
-                _resourceInfo[_supportedLanguagesConstants.EN_US_DIRECTIONS_ONLY] = { path: 'Content/i18nResources/StringResource_en.json', data: null };
-                _resourceInfo[_supportedLanguagesConstants.ES_US_DIRECTIONS_ONLY] = { path: 'Content/i18nResources/DirectionStringResource_es.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.EN] = { path: 'content/i18nResources/StringResource_en.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.ES_PR] = { path: 'content/i18nResources/StringResource_es.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.EN_US] = { path: 'content/i18nResources/StringResource_en.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.ES_US] = { path: 'content/i18nResources/StringResource_es.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.EN_US_DIRECTIONS_ONLY] = { path: 'content/i18nResources/StringResource_en.json', data: null };
+                _resourceInfo[_supportedLanguagesConstants.ES_US_DIRECTIONS_ONLY] = { path: 'content/i18nResources/DirectionStringResource_es.json', data: null };
 
                 var _languageData = {};
 
