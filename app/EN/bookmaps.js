@@ -1,6 +1,15 @@
 export default {
   SocialSciences8: ['Intro-SS', 'Placeholder'],
 
+  Reading8: [
+    'Intro-R',
+    'Placeholder'
+    // 'UI-R',
+    // 'Practice-R',
+    // 'Outro',
+    // 'Static-Menu-Common-EN'
+  ]
+
   /*
   'SocialSciences8': [
     'Intro-SS',
@@ -40,15 +49,6 @@ export default {
     'Practice-R',
     'Outro',
     'Static-Menu-Common-EN',],*/
-
-  Reading8: [
-    'Intro-R',
-    'Placeholder',
-    'UI-R',
-    'Practice-R',
-    'Outro',
-    'Static-Menu-Common-EN'
-  ]
 
   /*'Reading12': [
     'Intro-R',
