@@ -650,31 +650,25 @@ import toolbarConfigs from './toolbar-configs.js';
         };
 
         function gotoNextTutorialItem() {
-          if (tutorialModuleIndex < tutorialModules.length) {
-            currentTutorialModule = tutorialModules[tutorialModuleIndex];
-            if (tutorialModuleIndex + 1 < tutorialModules.length) {
-              window.location.href =
-                'main.html?subject=' +
-                subject +
-                '&module=' +
-                (tutorialModuleIndex + 1);
-              // backup
-              // window.location.href = 'https://totw-stage.naepims.org/app/EN/main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
-              return;
-            } else {
-              window.location.href = '/2021-tutorial-on-the-web/';
-            }
-            // 	$scope.progress.value = (tutorialModuleIndex + 1) / tutorialModules.length * 100;
-            // 	$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex++] + '/index.html');
-            // 	$timeout(function () {
-            // 		$scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
-            // 		$scope.currentItem.accessionNumber = currentTutorialModule;
-            // 		$scope.isInTransition = false;
-
-            // 		//reset all the buttons
-            // 		resetButtons();
-            // 		$scope.tutorial.iconStates.zoomOutIconState.setIconState('unavailable');
-            // 	});
+          currentTutorialModule = tutorialModules[tutorialModuleIndex];
+          if (tutorialModuleIndex + 1 < tutorialModules.length) {
+            tutorialModuleIndex += 1;
+            const tutorialFrame = `tutorials/${tutorialModules[tutorialModuleIndex]}/index.html`;
+            $scope.progress.value =
+              ((tutorialModuleIndex + 1) / tutorialModules.length) * 100;
+            $('#tutFrame').attr('src', tutorialFrame);
+            $timeout(function() {
+              $scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
+              $scope.currentItem.accessionNumber = currentTutorialModule;
+              $scope.isInTransition = false;
+              //reset all the buttons
+              resetButtons();
+              $scope.tutorial.iconStates.zoomOutIconState.setIconState(
+                'unavailable'
+              );
+            });
+          } else {
+            window.location.href = '/';
           }
         }
 
