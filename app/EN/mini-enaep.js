@@ -650,12 +650,9 @@ import toolbarConfigs from './toolbar-configs.js';
         };
 
         function gotoNextTutorialItem() {
-          console.log('test');
           if (tutorialModuleIndex < tutorialModules.length) {
-            console.log('test2');
             currentTutorialModule = tutorialModules[tutorialModuleIndex];
             if (tutorialModuleIndex + 1 < tutorialModules.length) {
-              console.log('test3');
               window.location.href =
                 'main.html?subject=' +
                 subject +
@@ -664,6 +661,8 @@ import toolbarConfigs from './toolbar-configs.js';
               // backup
               // window.location.href = 'https://totw-stage.naepims.org/app/EN/main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
               return;
+            } else {
+              window.location.href = '/';
             }
             // 	$scope.progress.value = (tutorialModuleIndex + 1) / tutorialModules.length * 100;
             // 	$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex++] + '/index.html');
