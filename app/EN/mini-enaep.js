@@ -662,7 +662,7 @@ import toolbarConfigs from './toolbar-configs.js';
               // window.location.href = 'https://totw-stage.naepims.org/app/EN/main.html?subject=' + subject + '&module=' + (tutorialModuleIndex + 1);
               return;
             } else {
-              window.location.href = '/';
+              window.location.href = '/2021-tutorial-on-the-web/';
             }
             // 	$scope.progress.value = (tutorialModuleIndex + 1) / tutorialModules.length * 100;
             // 	$('#tutFrame').attr('src', 'tutorials/' + tutorialModules[tutorialModuleIndex++] + '/index.html');
