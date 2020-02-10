@@ -1,3 +1,6 @@
+import bookmaps from './bookmaps.js';
+import toolbarConfigs from './toolbar-configs.js';
+
 (function () {
 	// history.pushState(null, document.title, location.href);
 	// history.pushState(null, document.title, location.href);
@@ -37,84 +40,7 @@
 	});
 
 	// Resolve toolbar button visiblity and configuration
-	var toolbarConfigs = {
 
-		'Math4BEs': {
-			help: { isVisible: true },
-			theme: { isVisible: true },
-			zoom: { isVisible: true },
-			tts: { isVisible: true },
-			scratchwork: {
-				isVisible: true,
-				pencil: { style: '' },
-				highlighter: { style: '' },
-				eraser: { style: '' },
-				clear: { style: '' }
-			},
-			bilingualToggle: { isVisible: true },
-			equationEditor: { isVisible: true },
-			calculator: { isVisible: true },
-			timer: { isVisible: true },
-			progress: { isVisible: true }
-		},
-
-		'Math8BEs': {
-			help: { isVisible: true },
-			theme: { isVisible: true },
-			zoom: { isVisible: true },
-			tts: { isVisible: true },
-			scratchwork: {
-				isVisible: true,
-				pencil: { style: '' },
-				highlighter: { style: '' },
-				eraser: { style: '' },
-				clear: { style: '' }
-			},
-			bilingualToggle: { isVisible: true },
-			equationEditor: { isVisible: true },
-			calculator: { isVisible: true },
-			timer: { isVisible: true },
-			progress: { isVisible: true }
-		},
-
-		'ReadingDEs': {
-			help: { isVisible: true },
-			theme: { isVisible: true },
-			zoom: { isVisible: true },
-			tts: { isVisible: true },
-			scratchwork: {
-				isVisible: true,
-				pencil: { style: '' },
-				highlighter: { style: '' },
-				eraser: { style: '' },
-				clear: { style: '' }
-			},
-			bilingualToggle: { isVisible: true },
-			equationEditor: { isVisible: false },
-			calculator: { isVisible: false },
-			timer: { isVisible: true },
-			progress: { isVisible: true }
-		},
-
-		'ScienceBEs': {
-			help: { isVisible: true },
-			theme: { isVisible: true },
-			zoom: { isVisible: true },
-			tts: { isVisible: true },
-			scratchwork: {
-				isVisible: true,
-				pencil: { style: '' },
-				highlighter: { style: '' },
-				eraser: { style: '' },
-				clear: { style: '' }
-			},
-			bilingualToggle: { isVisible: true },
-			equationEditor: { isVisible: false },
-			calculator: { isVisible: true },
-			timer: { isVisible: true },
-			progress: { isVisible: true }
-		},
-	};
 
 	function getToolbarConfig() {
 		var args = getRequestArgs();
@@ -123,42 +49,8 @@
 		return toolbarConfigs[subject];
 	}
 
-	var bookMapArray = {
-
-		'Math4BEs': [
-			'Intro-M4-BEs',
-			'UI-M4-BEs',
-			'EE4-BEs',
-			'Practica-M4-BEs',
-			'Outro-BEs',
-			'Static-Menu-Common-ES'],
-		
-		'Math8BEs': [
-			'Intro-M8-BEs',
-			'UI-M8-BEs',
-			'EE8-BEs',
-			'Practica-M8-BEs',
-			'Outro-BEs',
-			'Static-Menu-Common-ES'],
-
-		'ScienceBEs': [
-			'Intro-S-BEs',
-			'UI-S-BEs',
-			'Practica-S-BEs',
-			'Outro-BEs',
-			'Static-Menu-Common-ES'],
-
-		'ReadingDEs': [
-			'Intro-R-DEs',
-			'UI-R-DEs',
-			'Practica-R-DEs',
-			'Outro-DEs',
-			'Static-Menu-Common-ES'],
-
-	};
-
 	function getBookMapArray() {
-		return bookMapArray[subject];
+		return bookmaps[subject];
 	}
 
 	function noop() { }
