@@ -1,30 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
     <meta charset="utf-8" />
     <style type="text/css">
-        #error {
-            white-space: pre;
-            font-weight: bold;
-            color: red;
+        body {
+            font-family: Calibri, sans-serif;
+            background-color: white;
+            padding: 30px 50px;
+            font-size: 18px;
         }
-		body{background-color:white}
     </style>
 </head>
+
 <body>
     <p>This is a place holder for tutorial modules that have not been imported into the platform.</p>
-    <!--<p>You'll be advanced to the next item in 5 seconds.</p>
+    <p>Click next to continue.</p>
     <p id="error"></p>
     <script>
-        setTimeout(function () {
-            var enaepPlatform = window.enaepPlatform || window.parent.enaepPlatform;
-            if (enaepPlatform && enaepPlatform.clickNextButton) {
-                enaepPlatform.clickNextButton();
-            } else {
-                document.getElementById('error').innerText = 'An unexpected error has occurred.  \nPlease manually advance to the next item via DevTool.';
-            }
-        }, 5000);
-    </script>-->
+        // enable next button
+        const enaepPlatform = window.enaepPlatform || window.parent.enaepPlatform;
+        enaepPlatform.makeClickable(parent.window.enaepPlatform.BUTTONS.NEXT)
+    </script>
 </body>
+
 </html>
