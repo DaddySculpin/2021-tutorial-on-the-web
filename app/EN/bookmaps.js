@@ -3,10 +3,10 @@ export default {
 
   Reading8: [
     'Intro-R',
-    'Placeholder'
-    // 'UI-R',
-    // 'Practice-R',
-    // 'Outro',
+    //'Placeholder',
+    'UI-R',
+    'Practice-R',
+    'Outro',
     // 'Static-Menu-Common-EN'
   ]
 
