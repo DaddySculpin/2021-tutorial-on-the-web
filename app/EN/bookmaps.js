@@ -1,5 +1,5 @@
 export default {
-  SocialSciences8: ['Intro-SS'],
+  SocialSciences8: ['Intro-SS', 'Placeholder'],
 
   /*
   'SocialSciences8': [
