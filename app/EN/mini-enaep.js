@@ -1,5 +1,6 @@
 import bookmaps from './bookmaps.js';
 import toolbarConfigs from './toolbar-configs.js';
+import config from './config.js';
 
 (function() {
   // history.pushState(null, document.title, location.href);
@@ -668,7 +669,7 @@ import toolbarConfigs from './toolbar-configs.js';
               );
             });
           } else {
-            window.location.href = '/';
+            window.location.href = config.baseUrl;
           }
         }
 
