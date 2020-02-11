@@ -22,8 +22,13 @@ import config from './config.js';
     }
     return args;
   }
-  var args = getRequestArgs();
-  var subject = args['subject'];
+
+  let args = getRequestArgs();
+  let subject = args['subject'];
+  let bookmapConfig = args.bookmap
+    ? args.bookmap.split(',')
+    : bookmaps[subject];
+
   var currentModule = 0;
   if (args['module']) currentModule = parseInt(args['module']);
 
@@ -44,10 +49,6 @@ import config from './config.js';
     console.log(JSON.stringify(args));
 
     return toolbarConfigs[subject];
-  }
-
-  function getBookMapArray() {
-    return bookmaps[subject];
   }
 
   function noop() {}
@@ -137,9 +138,9 @@ import config from './config.js';
         scratchworkTutorialService,
         themeService
       ) {
-        var tutorialModuleIndex = currentModule;
-        var tutorialModules = getBookMapArray();
-        var currentTutorialModule = currentModule;
+        let tutorialModules = bookmapConfig;
+        let tutorialModuleIndex = currentModule;
+        let currentTutorialModule = currentModule;
 
         $scope.showToolbar = true;
         $scope.isInTransition = false;
