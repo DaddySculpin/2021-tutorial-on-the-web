@@ -1,6 +1,7 @@
 import bookmaps from './bookmaps.js';
 import toolbarConfigs from './toolbar-configs.js';
 import config from './config.js';
+import { waitForElement } from './util.js';
 
 (function() {
   // history.pushState(null, document.title, location.href);
@@ -677,10 +678,6 @@ import config from './config.js';
         function gotoFirstTutorialItem() {
           if (tutorialModuleIndex < tutorialModules.length) {
             currentTutorialModule = tutorialModules[tutorialModuleIndex];
-            // if(tutorialModuleIndex + 1 == tutorialModules.length) {
-            // 	window.location.replace('https://enaep-public.naepims.org/2018/Tutorial_Intro_Webpage/index.html');
-            // 	return;
-            // }
             $scope.progress.value =
               ((tutorialModuleIndex + 1) / (tutorialModules.length - 1)) * 100;
             if ($scope.progress.value >= 95) $scope.progress.value = 95;
@@ -690,6 +687,18 @@ import config from './config.js';
                 tutorialModules[tutorialModuleIndex] +
                 '/index.html'
             );
+            // Hook into the onload event of the content frame
+            // and detect the captivate content being loaded.
+            // If loaded then autoplay movie.
+            document.querySelector('#tutFrame').onload = (function() {
+              return async function() {
+                let context = document.querySelector('#tutFrame').contentWindow;
+                await waitForElement(context.document.body, 'initialLoading');
+                if (context.cp && context.cp.movie) {
+                  context.cp.movie.play();
+                }
+              };
+            })();
             $timeout(function() {
               $scope.showToolbar = !/^Summary-/.test(currentTutorialModule);
               $scope.currentItem.accessionNumber = currentTutorialModule;
