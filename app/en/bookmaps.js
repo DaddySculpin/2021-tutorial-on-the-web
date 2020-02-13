@@ -1,10 +1,11 @@
 export default {
-  SocialSciences8: ['Intro-SS', 'Placeholder'],
+  SocialSciences8: ['UI-SS', 'Intro-SS', 'Placeholder'],
 
   Reading8: [
-    'Intro-R',
-    //'Placeholder',
     'UI-R',
+	'Intro-R',
+    //'Placeholder',
+    //'UI-R',
     'Practice-R',
     'Outro',
     // 'Static-Menu-Common-EN'
