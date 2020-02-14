@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            font-family: Calibri, sans-serif;
+            background-color: white;
+            padding: 30px 50px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+<p>This is a place holder for where the platform will load the <strong>Practice Item</strong>'s Acnum.</p>
+<p>Click next to continue.</p>
+    <p id="error"></p>
+    <script>
+        // enable next button
+        const enaepPlatform = window.enaepPlatform || window.parent.enaepPlatform;
+        enaepPlatform.makeClickable(parent.window.enaepPlatform.BUTTONS.NEXT)
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 export default {
-  SocialSciences8: ['UI-SS', 'Intro-SS', 'Placeholder'],
+  SocialSciences8: ['Intro-SS','UI-SS', 'Practice-SS', 'Practice-Placeholder', 'Outro'],
 
   Reading8: [
     'UI-R',
