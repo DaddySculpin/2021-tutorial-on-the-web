@@ -1,7 +1,7 @@
 import bookmaps from './bookmaps.js';
 import toolbarConfigs from './toolbar-configs.js';
 import config from './config.js';
-import { waitForElement } from './util.js';
+import { waitForElement, checkAutoplay } from './util.js';
 
 (function() {
   // history.pushState(null, document.title, location.href);
@@ -694,7 +694,9 @@ import { waitForElement } from './util.js';
               return async function() {
                 let context = document.querySelector('#tutFrame').contentWindow;
                 await waitForElement(context.document.body, 'initialLoading');
-                if (context.cp && context.cp.movie) {
+                let autoplay = await checkAutoplay();
+                console.log('audio autoplay:', autoplay);
+                if (context.cp && context.cp.movie && autoplay === true) {
                   context.cp.movie.play();
                 }
               };
@@ -801,11 +803,8 @@ import { waitForElement } from './util.js';
 
         $(document).ready(function() {
           window.onresize = resizeContent;
-
           gotoFirstTutorialItem();
-
           $timeout(resizeContent, 100);
-
           enaepPlatform.setCurrentTheme($scope.currentTheme);
         });
       }
