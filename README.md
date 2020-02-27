@@ -14,9 +14,25 @@ The tutorials are also available on the web (Tutorial-on-the-web, or TOTW) for t
 familiarized with NAEP. This requires minor updates. 
 
 # Dev setup
+To work on the site, start a local web server in the root of this project. The easiest way to do this is to install node.js and then run the following:
+
+```bash
+cd /path/to/project
+npx http-server
+```
+
+The site will now be available at `http://localhost:8080`.
+
 # Bookmaps
-# Config / URL params
-# Video autoplay
+The bookmap order is configured in the `web/app/en/bookmaps.js` file. For debugging or demonstration purposes, this configuration can be overridden by url paramaters. Just add the modules as comma separated values:
+
+[https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&**bookmap=Outro,Placeholder**](https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&bookmap=Outro,Placeholde)
+
+# Sound autoplay
+Chrome will disable the autoplay of audio unless the user has interacted with the page. If the tutorial has been started from the home page then there will be no issues. 
+
+However, if you go directly to a module via a url then the audio will not autoplay. The current workaround for this is to allow autoplay in the site settings for Chrome. In the address bar click on the information icon and then change the sound setting to "allow".
+
 
 ----
 # Video recording of tutorial modules
