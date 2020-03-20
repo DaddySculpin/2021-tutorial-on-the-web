@@ -555,9 +555,6 @@ import { waitForElement } from './util.js';
               text: function() {
                 return $scope.currentItem.blockTitle;
               }
-            },
-            completionIcon: {
-              visible: returnFalse
             }
           },
           timer: {
