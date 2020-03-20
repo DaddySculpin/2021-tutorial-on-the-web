@@ -362,9 +362,6 @@ import toolbarConfigs from './toolbar-configs.js';
 							visible: returnTrue,
 							text: function () { return $scope.currentItem.blockTitle; }
 						},
-						completionIcon: {
-							visible: returnFalse
-						}
 					},
 					timer: {
 						visible: returnTrue,
