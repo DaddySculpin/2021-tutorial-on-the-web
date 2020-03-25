@@ -19,3 +19,19 @@ export async function waitForElement(targetElement, elId, timeout = 5000) {
   ]);
   return results;
 }
+
+// Based on the following:
+// https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
+export function checkAutoplay() {
+  return new Promise(resolve => {
+    const audio = new Audio();
+    audio.autoplay = true;
+    audio.volume = 0;
+    audio.src =
+      'data:audio/mpeg;base64,/+MYxAAAAANIAUAAAASEEB/jwOFM/0MM/90b/+RhST//w4NFwOjf///PZu////9lns5GFDv//l9GlUIEEIAAAgIg8Ir/JGq3/+MYxDsLIj5QMYcoAP0dv9HIjUcH//yYSg+CIbkGP//8w0bLVjUP///3Z0x5QCAv/yLjwtGKTEFNRTMuOTeqqqqqqqqqqqqq/+MYxEkNmdJkUYc4AKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq';
+    audio
+      .play()
+      .then(() => resolve(true))
+      .catch(() => resolve(false));
+  });
+}
