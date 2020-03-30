@@ -26,7 +26,33 @@ The site will now be available at `http://localhost:8080`.
 # Bookmaps
 The bookmap order is configured in the `web/app/en/bookmaps.js` file. For debugging or demonstration purposes, this configuration can be overridden by url paramaters. Just add the modules as comma separated values:
 
-[https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&**bookmap=Outro,Placeholder**](https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&bookmap=Outro,Placeholde)
+[https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&**bookmap=Outro,Placeholder**](https://naepdev.github.io/2021-tutorial-on-the-web/app/en/main.html?subject=Reading8&bookmap=Outro,Placeholder)
+
+# Scratcwork Punchouts
+When the scratchwork is enabled a transparent canvas will be added to the page which can be drawn on. However, there are some areas which we want to prevent any form of drawing. These "punchout" areas are defined in the `pucnhout.js` file. The format of the punchouts are as follows:
+
+```javascript
+  // scene name
+  Placeholder: [
+    {
+      // title - helps track the purpose of the punchout
+      title: 'Navigation Buttons',
+      // left, top, width, height
+      coords: [50, 50, 100, 100]
+    },
+    {
+      title: 'Submit Button',
+      coords: [100, 200, 200, 20]
+    },
+  ],
+```
+
+To be able to see the the resulting scratchwork canvas, add a `debug=true` paramater to the page URL:
+
+[http://localhost:8080/app/en/main.html?subject=Reading8&**debug=true**](http://localhost:8080/app/en/main.html?subject=Reading8&debug=true)
+
+Please note that the punchout areas are scaled to the size of the browser window. To calculate the correct scale we use the width and height dimensions of the captivate project. These dimensions are specified in the `config.js` file.
+
 
 # Sound autoplay
 Chrome will disable the autoplay of audio unless the user has interacted with the page. If the tutorial has been started from the home page then there will be no issues. 

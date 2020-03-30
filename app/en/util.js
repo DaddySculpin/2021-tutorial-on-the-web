@@ -35,3 +35,13 @@ export function checkAutoplay() {
       .catch(() => resolve(false));
   });
 }
+
+export function getRequestArgs() {
+  var argStrings = location.search.substr(1).split('\u0026');
+  var args = new Object();
+  for (var iArg = 0; iArg < argStrings.length; iArg++) {
+    var keyAndValue = argStrings[iArg].split('=');
+    args[keyAndValue[0]] = keyAndValue[1];
+  }
+  return args;
+}

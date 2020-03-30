@@ -1,37 +1,15 @@
 import bookmaps from './bookmaps.js';
 import toolbarConfigs from './toolbar-configs.js';
 import config from './config.js';
-import { waitForElement, checkAutoplay } from './util.js';
+import { waitForElement, checkAutoplay, getRequestArgs } from './util.js';
 
 (function() {
-  // history.pushState(null, document.title, location.href);
-  // history.pushState(null, document.title, location.href);
-  // history.pushState(null, document.title, location.href);
-  // history.pushState(null, document.title, location.href);
-  // history.pushState(null, document.title, location.href);
-  // window.addEventListener('popstate', function (event) {
-  // 	history.pushState(null, document.title, location.href);
-  // });
 
-  //extracts the variable from the link
-  function getRequestArgs() {
-    var argStrings = location.search.substr(1).split('\u0026');
-    var args = new Object();
-    for (var iArg = 0; iArg < argStrings.length; iArg++) {
-      var keyAndValue = argStrings[iArg].split('=');
-      args[keyAndValue[0]] = keyAndValue[1];
-    }
-    return args;
-  }
-
-  let args = getRequestArgs();
-  let subject = args['subject'];
-  let bookmapConfig = args.bookmap
-    ? args.bookmap.split(',')
-    : bookmaps[subject];
+  let { subject, bookmap, module } = getRequestArgs();
+  let bookmapConfig = bookmap ? bookmap.split(',') : bookmaps[subject];
 
   var currentModule = 0;
-  if (args['module']) currentModule = parseInt(args['module']);
+  if (module) currentModule = parseInt(module);
 
   var Strings = {
     sa_timeRemaining: 'Time Left',
@@ -46,9 +24,6 @@ import { waitForElement, checkAutoplay } from './util.js';
   });
 
   function getToolbarConfig() {
-    var args = getRequestArgs();
-    console.log(JSON.stringify(args));
-
     return toolbarConfigs[subject];
   }
 
