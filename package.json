@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NAEPDEV/2021-tutorial-on-the-web/issues"
   },
-  "homepage": "https://github.com/NAEPDEV/2021-tutorial-on-the-web#readme"
+  "homepage": "https://github.com/NAEPDEV/2021-tutorial-on-the-web#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
