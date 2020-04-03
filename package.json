@@ -1,0 +1,19 @@
+{
+  "name": "2021-tutorial-on-the-web",
+  "version": "1.0.0",
+  "description": "Repository for developing the 2021 NAEP tutorials for Social Studies, Reading, and Mathematics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NAEPDEV/2021-tutorial-on-the-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NAEPDEV/2021-tutorial-on-the-web/issues"
+  },
+  "homepage": "https://github.com/NAEPDEV/2021-tutorial-on-the-web#readme"
+}
